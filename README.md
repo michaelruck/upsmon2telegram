@@ -1,5 +1,8 @@
 # upsmon2telegram
 <h1>Sending upsmon messages to telegram bot</h1>
+<h2>You have to have a running ups/nut system to use this feature.</h2>
+Network UPS Tools (NUT Server) Ultimate Guide
+https://www.youtube.com/watch?v=vyBP7wpN72c
 
 <h2>Create telegram bot</h2>
 To send a message to Telegram group or channel, you should first create your own bot. Just open Telegram, find @BotFather and type /start. Then follow instructions to create bot and get token to access the HTTP API.
