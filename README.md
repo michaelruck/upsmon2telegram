@@ -54,7 +54,9 @@ Edit upsmon.conf
 <pre>sudo nano /etc/nut/upsmon.conf</pre>
 <pre>
 RUN_AS_USER root
+  
 MONITOR ups@localhost 1 user password master
+
 NOTIFYCMD "upsmon2telegram.sh"
 
 NOTIFYMSG ONLINE      "UPS %s on line power"
