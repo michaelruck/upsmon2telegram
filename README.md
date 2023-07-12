@@ -33,5 +33,16 @@ Here is a response example:
 }
 </pre>
 <h2>Script to send messages</h2>
-Here you will be helped:
+Here you will be helped about telegram bots:
 https://telegram-bot-sdk.readme.io/reference/sendmessage
+
+I have crafted the upsmon2telegram.sh bash script.
+First create the file in the right place.
+<pre>sudo nano /usr/bin/upsmon2telegram.sh</pre>
+Paste the code. Save it. Exit nano.
+Make the file executable.
+<pre>sudo chmod +x upsmon2telegram.sh</pre>
+Test it:
+<pre>NOTIFYTYPE=ONBATT upsmon2telegram.sh Test message</pre>
+
+
