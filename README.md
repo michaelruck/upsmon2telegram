@@ -9,7 +9,7 @@ Create a new Channel in Telegram and add your bot as a member. So your bot could
 
 In order to get Channel Id, first, post any message to the Channel. Then use this link template to get Channel Id:
 
-https://api.telegram.org/bot<YourBOTToken>/getUpdates
+<pre>https://api.telegram.org/bot<YourBOTToken>/getUpdates</pre>
 
 Here is a response example:
 
