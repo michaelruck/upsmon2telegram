@@ -44,7 +44,7 @@ First create the file in the right place.
 <pre>sudo nano /usr/bin/upsmon2telegram.sh</pre>
 Paste the code. Save it. Exit nano.
 Make the file executable.
-<pre>sudo chmod +x upsmon2telegram.sh</pre>
+<pre>sudo chmod +x /usr/bin/upsmon2telegram.sh</pre>
 Test it:
 <pre>NOTIFYTYPE=ONBATT upsmon2telegram.sh Test message</pre>
 You should receive a message in your telegram channel.
