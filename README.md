@@ -44,5 +44,38 @@ Make the file executable.
 <pre>sudo chmod +x upsmon2telegram.sh</pre>
 Test it:
 <pre>NOTIFYTYPE=ONBATT upsmon2telegram.sh Test message</pre>
+You should receive a message in your telegram channel.
+
+<h2>Make upsmon do the trick</h2>
+Edit upsmon.conf
+<pre>sudo nano /etc/nut/upsmon.conf</pre>
+<pre>
+RUN_AS_USER root
+MONITOR ups@localhost 1 user password master
+NOTIFYCMD "upsmon2telegram.sh"
+
+NOTIFYMSG ONLINE      "UPS %s on line power"
+NOTIFYMSG ONBATT      "UPS %s on battery"
+NOTIFYMSG LOWBATT     "UPS %s battery is low"
+NOTIFYMSG FSD         "UPS %s: forced shutdown in progress"
+NOTIFYMSG COMMOK      "Communications with UPS %s established"
+NOTIFYMSG COMMBAD     "Communications with UPS %s lost"
+NOTIFYMSG SHUTDOWN    "Auto logout and shutdown proceeding"
+NOTIFYMSG REPLBATT    "UPS %s battery needs to be replaced"
+NOTIFYMSG NOCOMM      "UPS %s is unavailable"
+NOTIFYMSG NOPARENT    "upsmon parent process died - shutdown impossible"
+
+NOTIFYFLAG ONLINE     SYSLOG+WALL+EXEC
+NOTIFYFLAG ONBATT     SYSLOG+WALL+EXEC
+NOTIFYFLAG LOWBATT    SYSLOG+WALL+EXEC
+NOTIFYFLAG FSD        SYSLOG+WALL+EXEC
+NOTIFYFLAG COMMOK     SYSLOG+WALL+EXEC
+NOTIFYFLAG COMMBAD    SYSLOG+WALL+EXEC
+NOTIFYFLAG SHUTDOWN   SYSLOG+WALL+EXEC
+NOTIFYFLAG REPLBATT   SYSLOG+WALL+EXEC
+NOTIFYFLAG NOCOMM     SYSLOG+WALL+EXEC
+NOTIFYFLAG NOPARENT   SYSLOG+WALL+EXEC
+
+</pre>
 
 
