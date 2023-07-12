@@ -24,7 +24,7 @@ Here is a response example:
       "channel_post": {
         "message_id":48,
         "chat": {
-          "id":<b>-123123123</b>, // this is your channel id
+          "id":<i>-123123123</i>, // this is your channel id
           "title":"Notifications",
           "type":"channel"
         },
