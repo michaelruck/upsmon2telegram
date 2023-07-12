@@ -6,16 +6,16 @@ BOT_TOKEN=YYYYYYY:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 NOW=$(date)
 case "${NOTIFYTYPE}" in
     ONLINE|COMMOK)
-        EMOJI=$(echo -e '\U00002714') # white heavy check mark :white_check_mark:
+        EMOJI=$(echo -e '\U00002714') # white heavy check mark
         ;;
     ONBATT|COMMBAD|REPLBATT)
-        EMOJI=$(echo -e '\xE2\x9A\xA0') # warning sign :warning:
+        EMOJI=$(echo -e '\xE2\x9A\xA0') # warning sign
         ;;
     LOWBATT|FSD|NOCOMM|SHUTDOWN)
-        EMOJI=$(echo -e '\xF0\x9F\x86\x98') # squared sos :sos:
+        EMOJI=$(echo -e '\xF0\x9F\x86\x98') # squared sos
         ;;
     NOPARENT)
-        EMOJI=$(echo -e '\xF0\x9F\x94\x84') # anticlockwise downwards and upwards open circle arrows :arrows_counterclockwise:
+        EMOJI=$(echo -e '\xF0\x9F\x94\x84') # anticlockwise downwards and upwards open circle arrows
         ;;
     *)
         EMOJI=$(echo -e '\U0001f300') #Swirl
